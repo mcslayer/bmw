@@ -1,53 +1,61 @@
-div {
+body
+{
+    background: #c5c5c5;
+}
+
+.bmw
+{
+    font: bold 24px/1 Arial, sans-serif;
+
     position: relative;
 
-    width: 238px;
-    height: 232px;
-    margin-left: 6px;
+    width: 9.917em;
+    height: 9.6667em;
 
-    border-radius: 100%;
-    box-shadow: 0 0 0 2px black inset, 0 0 0 6px white inset, 0 0 0 47px black inset, 0 0 0 51px white inset;
-
-    font: bold 1.5em/1 arial, sans-serif;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 .08334em black inset, 0 0 0 .25em white inset, 0 0 0 1.95834em black inset, 0 0 0 2.125em white inset;
 }
-div::before {
+
+.bmw::before
+{
     position: absolute;
-    top: 50px;
-    left: 51px;
     z-index: -1;
+    top: 2.08334em;
+    left: 2.125em;
 
-    display: block;
+    width: 2.8334em;
+    height: 2.8334em;
 
-    width: 68px;
-    height: 68px;
-
-    content: "";
+    content: '';
 
     background: #0094da;
-    box-shadow: 68px 68px 0 #0094da;
+    box-shadow: 2.8334em 2.8334em 0 #0094da,  0 2.8334em 0 #fff, 2.8334em 0 0 #fff;
 }
-span {
-    position: absolute;
 
-    -webkit-transform: translate(2.2em, 0.1em) rotate(0);
-    transform: translate(2.2em, 0.1em) rotate(0);
-
-    color: white;
-
-    font-weight: bold;
+.bmw::after,
+span
+{
     font-size: 1.9em;
-}
-span::before {
+
     position: absolute;
 
-    content: "B";
-    -webkit-transform: translate(-1.3em, 0.5em) rotate(-45deg);
-    transform: translate(-1.3em, 0.5em) rotate(-45deg);
+    content: 'M';
+    transform: translate(2.2em, .1em) rotate(0);
 }
-span::after {
+
+span::before
+{
     position: absolute;
 
-    content: "W";
-    -webkit-transform: translate(0.5em, 0.6em) rotate(45deg);
-    transform: translate(0.5em, 0.6em) rotate(45deg);
+    content: 'B';
+    transform: translate(-1.3em, .5em) rotate(-45deg);
+}
+
+span::after
+{
+    position: absolute;
+
+    content: 'W';
+    transform: translate(1.33em, .6em) rotate(45deg);
 }
